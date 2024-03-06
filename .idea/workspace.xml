@@ -70,7 +70,6 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHON_VERSION" value="3.7.10" />
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="SECRET_KEY" value="8BYkEfBA6O6donzWlSihBXox7C0sKR6b" />
       </envs>
@@ -164,7 +163,7 @@
       <workItem from="1709463359028" duration="5348000" />
       <workItem from="1709472184429" duration="1822000" />
       <workItem from="1709737298308" duration="11014000" />
-      <workItem from="1709748647647" duration="1238000" />
+      <workItem from="1709748647647" duration="1360000" />
     </task>
     <servers />
   </component>
