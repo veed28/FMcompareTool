@@ -14,3 +14,4 @@ SQLAlchemy==2.0.25
 Flask_Login==0.6.3
 gunicorn==19.7.1
 striprtf==0.0.26
+psycopg2==2.9.9

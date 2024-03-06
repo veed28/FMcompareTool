@@ -1,4 +1,5 @@
 import json, operator
+import psycopg2
 from striprtf.striprtf import rtf_to_text
 from roles import Role
 from flask import Flask, render_template, redirect, url_for, request, flash
