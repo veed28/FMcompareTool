@@ -127,7 +127,7 @@ def role(selected_role):
     first_dict = {}
     final_list = []
     user_name = current_user.name
-    file = open(f"./uploads/{user_name}/Untitled.rtf", encoding="utf-8")
+    file = open(f'./uploads/{user_name}/Untitled.rtf', encoding="utf-8")
     content = file.read()
     text = rtf_to_text(content)
     text2 = text.replace(" ", "")
