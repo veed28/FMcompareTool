@@ -79,18 +79,20 @@
   <span class="caret"></span></button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_wing_back_d') }}">IWB-D</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_wing_back_s') }}">IWB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_wing_back_a') }}">IWB-A</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='complete_wing_back_s') }}">CWB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='complete_wing_back_a') }}">CWB-A</a></li>
-      <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wing_back_d') }}">WB-D</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wing_back_s') }}">WB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wing_back_a') }}">WB-A</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='full_back_d') }}">FB-D</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='full_back_s') }}">FB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='full_back_a') }}">FB-A</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_full_back') }}">IFB</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='mezzala_s') }}">Mez-S</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='mezzala_a') }}">Mez-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='advanced_playmaker_s') }}">AP-S</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='advanced_playmaker_a') }}">AP-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='deep_lying_playmaker_d') }}">DLP-D</a></li>
+      <li><a class="dropdown-item" href="{{ url_for('role', selected_role='deep_lying_playmaker_s') }}">DLP-S</a></li>
+      <li><a class="dropdown-item" href="{{ url_for('role', selected_role='roaming_playmaker') }}">RPM</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='central_midfielder_d') }}">CM-D</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='central_midfielder_s') }}">CM-S</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='central_midfielder_a') }}">CM-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='box_to_box_midfielder') }}">BBM</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='carrilero') }}">Car</a></li>
+      <li><a class="dropdown-item" href="{{ url_for('role', selected_role='ball_winning_midfielder_d') }}">BWM-D</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='ball_winning_midfielder_s') }}">BWM-S</a></li>
   </ul>
 
 </div>
@@ -100,18 +102,16 @@
   <span class="caret"></span></button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_wing_back_d') }}">IWB-D</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_wing_back_s') }}">IWB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_wing_back_a') }}">IWB-A</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='complete_wing_back_s') }}">CWB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='complete_wing_back_a') }}">CWB-A</a></li>
-      <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wing_back_d') }}">WB-D</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wing_back_s') }}">WB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wing_back_a') }}">WB-A</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='full_back_d') }}">FB-D</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='full_back_s') }}">FB-S</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='full_back_a') }}">FB-A</a></li>
-    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_full_back') }}">IFB</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='winger_s') }}">W-S</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='winger_a') }}">W-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_winger_s') }}">IW-S</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inverted_winger_a') }}">IW-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inside_forward_s') }}">IF-S</a></li>
+      <li><a class="dropdown-item" href="{{ url_for('role', selected_role='inside_forward_a') }}">IF-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wide_playmaker_s') }}">WP-S</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='wide_playmaker_a') }}">WP-A</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='defensive_winger_d') }}">DW-D</a></li>
+    <li><a class="dropdown-item" href="{{ url_for('role', selected_role='defensive_winger_s') }}">DW-S</a></li>
   </ul>
 
 </div>

@@ -35,11 +35,11 @@ class Role:
         self.jumping_reach = jumping_reach(player, list)
 
     def complete_wing_back_s(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + self.flair + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.agility + self.pace + (self.stamina * 2)
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + self.flair + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
         return self.score
 
     def complete_wing_back_a(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.agility + self.pace + (self.stamina * 2)
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
         return self.score
 
     def inverted_wing_back_s(self):
@@ -218,6 +218,116 @@ class Role:
                     self.technique * 2) + self.anticipation + (self.composure * 2) + (
                                  self.decisions * 2) + (self.flair * 2) + (self.off_the_ball * 2) + (self.teamwork * 2) + (
                                  self.vision * 2) + self.balance
+        return self.score
+
+    def mezzala_s(self):
+        self.score = self.dribbling + self.first_touch + self.long_shots + (self.passing * 2) + self.tackling + (
+                    self.technique * 2) + self.anticipation + self.composure + (self.decisions * 2) + (
+                self.off_the_ball * 2) + self.vision + (self.work_rate * 2) + (self.acceleration * 2) + self.balance + self.stamina
+        return self.score
+
+    def mezzala_a(self):
+        self.score = (self.dribbling * 2) + self.finishing + self.first_touch + self.long_shots + (self.passing * 2) + (
+                    self.technique * 2) + self.anticipation + self.composure + (self.decisions * 2) + self.flair + (
+                self.off_the_ball * 2) + (self.vision * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.balance + self.stamina
+        return self.score
+
+    def central_midfielder_d(self):
+        self.score = self.first_touch + self.marking + self.passing + (
+                    self.tackling * 2) + self.technique + self.aggression + self.anticipation + self.composure + (
+                                 self.concentration * 2) + (self.decisions * 2) + (self.positioning * 2) + (
+                                 self.teamwork * 2) + self.work_rate + self.stamina
+        return self.score
+
+    def central_midfielder_s(self):
+        self.score = (self.first_touch * 2) + (self.passing * 2) + (
+                    self.tackling * 2) + self.technique + self.anticipation + self.composure + self.concentration + (self.decisions * 2) + self.off_the_ball + (
+                                 self.teamwork * 2) + self.vision + self.work_rate + self.stamina
+        return self.score
+
+    def central_midfielder_a(self):
+        self.score = (self.first_touch * 2) + self.long_shots + (self.passing * 2) + self.tackling + self.technique + self.anticipation + self.composure + (self.decisions * 2) + (self.off_the_ball * 2) + self.teamwork + self.vision + self.work_rate + self.acceleration + self.stamina
+        return self.score
+
+
+    def box_to_box_midfielder(self):
+        self.score = self.dribbling + self.finishing + self.first_touch + self.long_shots + (self.passing * 2) + (self.tackling * 2) + self.technique + self.aggression + self.anticipation + self.composure + self.decisions + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (
+                                 self.work_rate * 2) + self.acceleration + self.balance + self.pace + (self.stamina) + self.strength
+        return self.score
+
+    def carrilero(self):
+        self.score = (self.first_touch * 2) + (self.passing * 2) + (self.tackling) + self.technique + self.anticipation + self.composure + self.concentration + (
+                                 self.decisions * 2) + self.off_the_ball + (self.positioning * 2) + (self.teamwork * 2) + self.vision + self.work_rate + (self.stamina * 2)
+        return self.score
+
+    def winger_s(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.passing + (self.technique * 2) + self.off_the_ball * 2 + self.work_rate * 2 + (self.acceleration * 2) + (self.agility * 2) + self.balance + self.pace + self.stamina
+        return self.score
+
+    def winger_a(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.passing + (self.technique * 2) + self.anticipation + self.flair + self.off_the_ball * 2 + self.work_rate * 2 + (self.acceleration * 2) + (self.agility * 2) + self.balance + self.pace + self.stamina
+        return self.score
+
+    def inverted_winger_s(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.long_shots + (self.passing * 2) + (self.technique * 2) + self.composure + self.decisions + self.off_the_ball + self.vision + self.work_rate + (self.acceleration * 2) + (self.agility * 2) + self.balance + self.pace + self.stamina
+        return self.score
+
+    def inverted_winger_a(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.long_shots + (self.passing * 2) + (self.technique * 2) + self.composure + self.decisions + self.flair + self.off_the_ball + self.vision + self.work_rate + (self.acceleration * 2) + (self.agility * 2) + self.balance + self.pace + self.stamina
+        return self.score
+
+    def inside_forward_s(self):
+        self.score = (self.dribbling * 2) + (self.finishing * 2) + (self.first_touch * 2) + self.long_shots + (self.passing * 2) + (self.technique * 2) + self.anticipation + self.composure + (self.off_the_ball * 2) + self.vision + self.work_rate + (self.acceleration * 2) + (self.agility * 2) + self.balance + self.pace + self.stamina
+        return self.score
+
+    def inside_forward_a(self):
+        self.score = (self.dribbling * 2) + (self.finishing * 2) + (self.first_touch * 2) + self.long_shots + (self.passing * 2) + (self.technique * 2) + (self.anticipation * 2) + self.composure + (self.off_the_ball * 2) + self.work_rate + (self.acceleration * 2) + (self.agility * 2) + self.balance + self.pace + self.stamina
+        return self.score
+
+    def raumdeuter(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance+ self.pace + (self.stamina * 2)
+        return self.score
+
+    def wide_target_forward_s(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        return self.score
+
+    def wide_target_forward_a(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        return self.score
+
+    def wide_playmaker_s(self):
+        self.score = self.dribbling + (self.first_touch * 2) + (self.passing * 2) + (
+                    self.technique * 2) + (self.composure * 2) + (
+                                 self.decisions * 2) + self.off_the_ball + (self.teamwork * 2) + (
+                                 self.vision * 2) + self.agility
+        return self.score
+
+    def wide_playmaker_a(self):
+        self.score = (self.dribbling * 2) + (self.first_touch * 2) + (self.passing * 2) + (
+                    self.technique * 2) + self.anticipation + (self.composure * 2) + (
+                                 self.decisions * 2) + self.flair + (self.off_the_ball * 2) + (self.teamwork * 2) + (
+                                 self.vision * 2) + self.acceleration + self.agility
+        return self.score
+
+    def defensive_winger_d(self):
+        self.score = self.crossing + self.dribbling + self.first_touch + self.marking + self.tackling + (self.technique * 2) + self.aggression + self.anticipation + self.concentration + self.decisions + (self.off_the_ball * 2) + (self.positioning * 2) + (self.teamwork * 2) + (self.work_rate * 2) + self.acceleration + (self.stamina * 2)
+        return self.score
+
+    def defensive_winger_s(self):
+        self.score = (self.crossing * 2) + self.dribbling + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.aggression + self.anticipation + self.composure + self.concentration + self.decisions + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + self.acceleration + (self.stamina * 2)
+        return self.score
+
+    def wide_midfielder_d(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        return self.score
+
+    def wide_midfielder_s(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance+ self.pace + (self.stamina * 2)
+        return self.score
+
+    def wide_midfielder_a(self):
+        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
         return self.score
 
     def pressing_forward_a(self):

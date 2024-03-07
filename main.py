@@ -239,6 +239,57 @@ def role(selected_role):
         elif selected_role == 'regista': #Reg
             score = role.regista()
             display_role = "Regista"
+        elif selected_role == 'mezzala_s': #Mez-S
+            score = role.mezzala_s()
+            display_role = "Mezzala - Support"
+        elif selected_role == 'mezzala_a': #Mez-A
+            score = role.mezzala_a()
+            display_role = "Mezzala - Attack"
+        elif selected_role == 'central_midfielder_d': #CM-D
+            score = role.central_midfielder_d()
+            display_role = "Central Midfielder - Defend"
+        elif selected_role == 'central_midfielder_s': #CM-S
+            score = role.central_midfielder_s()
+            display_role = "Central Midfielder - Support"
+        elif selected_role == 'central_midfielder_a': #CM-A
+            score = role.central_midfielder_a()
+            display_role = "Central Midfielder - Attack"
+        elif selected_role == 'box_to_box_midfielder': #BBM
+            score = role.box_to_box_midfielder()
+            display_role = "Box to Box Midfielder"
+        elif selected_role == 'carrilero': #Car
+            score = role.carrilero()
+            display_role = "Carrilero"
+        elif selected_role == 'winger_s': #W-S
+            score = role.winger_s()
+            display_role = "Winger - Support"
+        elif selected_role == 'winger_a': #W_A
+            score = role.winger_a()
+            display_role = "Winger - Attack"
+        elif selected_role == 'inverted_winger_s': #IW-S
+            score = role.inverted_winger_s()
+            display_role = "Inverted Winger - Support"
+        elif selected_role == 'inverted_winger_a': #IW-A
+            score = role.inverted_winger_a()
+            display_role = "Inverted Winger - Attack"
+        elif selected_role == 'inside_forward_s': #IF-S
+            score = role.inside_forward_s()
+            display_role = "Inside Forward - Support"
+        elif selected_role == 'inside_forward_a': #IF-A
+            score = role.inside_forward_a()
+            display_role = "Inside Forward - Attack"
+        elif selected_role == 'wide_playmaker_s': #WP-S
+            score = role.wide_playmaker_s()
+            display_role = "Wide Playmaker - Support"
+        elif selected_role == 'wide_playmaker_a': #WP-A
+            score = role.wide_playmaker_a()
+            display_role = "Wide Playmaker - Attack"
+        elif selected_role == 'defensive_winger_d': #DW-D
+            score = role.defensive_winger_d()
+            display_role = "Defensive Winger - Defend"
+        elif selected_role == 'defensive_winger_s': #DW-S
+            score = role.defensive_winger_s()
+            display_role = "Defensive Winger - Support"
         elif selected_role == 'advanced_playmaker_s': #AP-S
             score = role.advanced_playmaker_s()
             display_role = "Advanced Playmaker - Support"
