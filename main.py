@@ -57,7 +57,7 @@ def home():
 
     if form.validate_on_submit():
         filename = secure_filename(form.file.data.filename)
-        form.file.data.save(f'uploads/{current_user.name}/' + filename)
+        form.file.data.save(f'/opt/render/project/src/src/uploads/{current_user.name}/' + filename)
         return redirect(url_for('home'))
 
     return render_template("index.html", form=form, logged_in=current_user.is_authenticated)
