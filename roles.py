@@ -434,3 +434,21 @@ class Role:
                                  self.off_the_ball * 2) + self.teamwork + self.vision + self.work_rate + (
                                  self.acceleration * 2) + (self.agility * 2) + self.balance + self.jumping_reach + self.pace + self.stamina + (self.strength * 2)
         return self.score
+
+    def false_nine(self):
+        self.score = (self.dribbling *2) + self.finishing + (self.first_touch * 2) + (self.passing * 2) + (self.technique * 2) + self.anticipation + (self.composure * 2) + (self.decisions * 2) + self.flair + (
+                                 self.off_the_ball * 2) + self.teamwork + (self.vision * 2) + (
+                                 self.acceleration * 2) + (self.agility * 2) + self.balance
+        return self.score
+
+    def poacher(self):
+        self.score = (self.finishing * 2) + self.first_touch + self.technique + (self.anticipation * 2) + (self.composure * 2) + self.decisions + (self.off_the_ball * 2) + self.acceleration
+        return self.score
+
+    def target_forward_s(self):
+        self.score = self.finishing + self.first_touch + (self.heading * 2) + self.aggression + self.anticipation + (self.bravery * 2) + self.composure + self.decisions + self.off_the_ball + (self.teamwork * 2) + (self.balance * 2) + (self.jumping_reach * 2) + (self.strength * 2)
+        return self.score
+
+    def target_forward_a(self):
+        self.score = (self.finishing * 2) + self.first_touch + (self.heading * 2) + self.aggression + self.anticipation + (self.bravery * 2) + (self.composure * 2) + self.decisions + (self.off_the_ball * 2) + self.teamwork + (self.balance * 2) + (self.jumping_reach * 2) + (self.strength * 2)
+        return self.score

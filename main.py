@@ -352,6 +352,18 @@ def role(selected_role):
         elif selected_role == 'complete_forward_a':  # CF-A
             score = role.complete_forward_a()
             display_role = "Complete Forward - Attack"
+        elif selected_role == 'false_nine':  # F9
+            score = role.false_nine()
+            display_role = "False 9"
+        elif selected_role == 'poacher':  # P
+            score = role.poacher()
+            display_role = "Poacher"
+        elif selected_role == 'target_forward_s':  # TF-S
+            score = role.target_forward_s()
+            display_role = "Target Forward - Support"
+        elif selected_role == 'target_forward_a':  # TF-S
+            score = role.target_forward_a()
+            display_role = "Target Forward - Attack"
         first_dict[role.player] = "{:.2f}".format(score)
     final_list = []
     dict_sorted = dict(sorted(first_dict.items(), key=operator.itemgetter(1), reverse=True))
