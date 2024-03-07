@@ -90,7 +90,7 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
-        path = './uploads/' + new_user.name
+        path = '/opt/render/project/src/src/uploads/' + new_user.name
         os.mkdir(path)
         return redirect(url_for("home"))
 
@@ -127,7 +127,7 @@ def role(selected_role):
     first_dict = {}
     final_list = []
     user_name = current_user.name
-    file = open(f"./uploads/{user_name}/Untitled.rtf", encoding="utf-8")
+    file = open(f"/opt/render/project/src/src/uploads/{user_name}/Untitled.rtf", encoding="utf-8")
     content = file.read()
     text = rtf_to_text(content)
     text2 = text.replace(" ", "")
