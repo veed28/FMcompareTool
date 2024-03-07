@@ -90,7 +90,7 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
-        path = 'uploads/' + new_user.name
+        path = './uploads/' + new_user.name
         os.mkdir(path)
         return redirect(url_for("home"))
 
@@ -124,25 +124,24 @@ def logout():
 
 @app.route("/role/<selected_role>", methods=['GET', 'POST'])
 def role(selected_role):
+    first_dict = {}
+    final_list = []
     user_name = current_user.name
-    try:
-        with open(f"uploads/{user_name}/Untitled.rtf", encoding="utf-8") as file:
-            content = file.read()
-            text = rtf_to_text(content)
-            text2 = text.replace(" ", "")
-            text = text2.replace("-", "")
-            text2 = text.replace("||", "|")
-            text = text2.replace("||", "|")
-            text2 = text.replace("||", "|")
-            list = text2.split("|")
-            del list[0:38]
-            del list[-1]
-            player_count = int(len(list) / 37)
-    except:
-        flash("No file uploaded to your account, yet.")
-
+    file = open(f"./uploads/{user_name}/Untitled.rtf", encoding="utf-8")
+    content = file.read()
+    text = rtf_to_text(content)
+    text2 = text.replace(" ", "")
+    text = text2.replace("-", "")
+    text2 = text.replace("||", "|")
+    text = text2.replace("||", "|")
+    text2 = text.replace("||", "|")
+    final_list = text2.split("|")
+    del final_list[0:38]
+    del final_list[-1]
+    player_count = int(len(final_list) / 37)
+    file.close()
     for player in range(player_count):
-        role = Role(player, list)
+        role = Role(player, final_list)
         if selected_role == 'inverted_wing_back_s': #IWB-S
             score = role.inverted_wing_back_s()
             display_role = "Inverted Wing Back - Support"
@@ -312,9 +311,7 @@ def role(selected_role):
             score = role.trequartista()
             display_role = "Trequartista. FUCK YEAH!"
         first_dict[role.player] = "{:.2f}".format(score)
-
-
-
+    final_list = []
     dict_sorted = dict(sorted(first_dict.items(), key=operator.itemgetter(1), reverse=True))
     return render_template("roles.html", role=display_role, dict=dict_sorted)
 
@@ -335,8 +332,6 @@ def role(selected_role):
 
 # print(list)
 # print(list[37]) <-- player names are at 0,37,74 etc.
-
-first_dict = {}
 
 # find the technique value for every player
 # for player in range(player_count):
