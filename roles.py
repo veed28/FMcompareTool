@@ -285,15 +285,15 @@ class Role:
         return self.score
 
     def raumdeuter(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance+ self.pace + (self.stamina * 2)
+        self.score = (self.finishing * 2) + self.first_touch + self.technique + (self.anticipation * 2) + (self.composure * 2) + (self.concentration * 2) + (self.decisions * 2) + (self.off_the_ball * 2) + self.work_rate + self.acceleration + (self.balance * 2) + self.stamina
         return self.score
 
     def wide_target_forward_s(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        self.score = self.crossing + self.first_touch + self.heading + self.anticipation + (self.bravery * 2) + self.off_the_ball + self.positioning + (self.teamwork * 2) + self.work_rate + self.balance + (self.jumping_reach * 2) + self.stamina + (self.strength * 2)
         return self.score
 
     def wide_target_forward_a(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        self.score = self.crossing + self.finishing + self.first_touch + self.heading + self.anticipation + (self.bravery * 2) + self.off_the_ball + self.positioning + (self.teamwork * 2) + self.work_rate + self.balance + (self.jumping_reach * 2) + self.stamina + (self.strength * 2)
         return self.score
 
     def wide_playmaker_s(self):
@@ -319,17 +319,16 @@ class Role:
         return self.score
 
     def wide_midfielder_d(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        self.score = self.crossing + self.first_touch + self.marking + (self.passing * 2) + (self.tackling * 2) + self.technique + self.anticipation + self.composure + (self.concentration * 2) + (self.decisions * 2) + (self.positioning * 2) + (self.work_rate * 2) + self.stamina
         return self.score
 
     def wide_midfielder_s(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance+ self.pace + (self.stamina * 2)
+        self.score = self.crossing + self.first_touch + (self.passing * 2) + (self.tackling * 2) + self.technique + self.anticipation + self.composure + self.concentration + (self.decisions * 2) + self.off_the_ball + self.positioning + (self.teamwork * 2) + self.vision + (self.work_rate * 2) + (self.stamina * 2)
         return self.score
 
     def wide_midfielder_a(self):
-        self.score = (self.crossing * 2) + (self.dribbling * 2) + self.first_touch + self.marking + self.passing + self.tackling + (self.technique * 2) + self.anticipation + self.decisions + (self.flair * 2) + (self.off_the_ball * 2) + self.positioning + (self.teamwork * 2) + (self.work_rate * 2) + (self.acceleration * 2) + self.agility + self.balance + self.pace + (self.stamina * 2)
+        self.score = (self.crossing * 2) + (self.first_touch * 2) + (self.passing * 2) + self.tackling + self.technique + self.anticipation + self.composure + (self.decisions * 2) + self.off_the_ball + (self.teamwork * 2) + self.vision + (self.work_rate * 2) + (self.stamina * 2)
         return self.score
-
     def pressing_forward_a(self):
         self.score = self.finishing + self.first_touch + (self.aggression * 2) + (self.anticipation * 2) + (
                     self.bravery * 2) + self.composure + self.concentration + self.decisions + (

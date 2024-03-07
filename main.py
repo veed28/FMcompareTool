@@ -289,6 +289,24 @@ def role(selected_role):
         elif selected_role == 'defensive_winger_s': #DW-S
             score = role.defensive_winger_s()
             display_role = "Defensive Winger - Support"
+        elif selected_role == 'wide_midfielder_d': #WM-D
+            score = role.wide_midfielder_d()
+            display_role = "Wide Midfielder - Defend"
+        elif selected_role == 'wide_midfielder_s': #WM-S
+            score = role.wide_midfielder_s()
+            display_role = "Wide Midfielder - Support"
+        elif selected_role == 'wide_midfielder_a': #WM-A
+            score = role.wide_midfielder_a()
+            display_role = "Wide Midfielder - Attack"
+        elif selected_role == 'raumdeuter': #Raum
+            score = role.raumdeuter()
+            display_role = "Raumdeuter"
+        elif selected_role == 'wide_target_forward_s': #WTF-S
+            score = role.wide_target_forward_s()
+            display_role = "Wide Target Forward - Support"
+        elif selected_role == 'wide_target_forward_a': #WTF-A
+            score = role.wide_target_forward_a()
+            display_role = "Wide Target Forward - Attack"
         elif selected_role == 'advanced_playmaker_s': #AP-S
             score = role.advanced_playmaker_s()
             display_role = "Advanced Playmaker - Support"
