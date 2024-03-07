@@ -328,6 +328,30 @@ def role(selected_role):
         elif selected_role == 'trequartista':  # TREQ
             score = role.trequartista()
             display_role = "Trequartista. FUCK YEAH!"
+        elif selected_role == 'advanced_forward':  # AF
+            score = role.advanced_forward()
+            display_role = "Advanced Forward"
+        elif selected_role == 'pressing_forward_d':  # PF-D
+            score = role.pressing_forward_d()
+            display_role = "Pressing Forward - Defend"
+        elif selected_role == 'pressing_forward_s':  # PF-S
+            score = role.pressing_forward_s()
+            display_role = "Pressing Forward - Support"
+        elif selected_role == 'pressing_forward_a':  # PF-A
+            score = role.pressing_forward_a()
+            display_role = "Pressing Forward - Attack"
+        elif selected_role == 'deep_lying_forward_s':  # DLF-S
+            score = role.deep_lying_forward_s()
+            display_role = "Deep Lying Forward - Support"
+        elif selected_role == 'deep_lying_forward_a':  # DLF-A
+            score = role.deep_lying_forward_a()
+            display_role = "Deep Lying Forward - Attack"
+        elif selected_role == 'complete_forward_s':  # CF-S
+            score = role.complete_forward_s()
+            display_role = "Complete Forward - Support"
+        elif selected_role == 'complete_forward_a':  # CF-A
+            score = role.complete_forward_a()
+            display_role = "Complete Forward - Attack"
         first_dict[role.player] = "{:.2f}".format(score)
     final_list = []
     dict_sorted = dict(sorted(first_dict.items(), key=operator.itemgetter(1), reverse=True))

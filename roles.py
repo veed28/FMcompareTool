@@ -329,20 +329,6 @@ class Role:
     def wide_midfielder_a(self):
         self.score = (self.crossing * 2) + (self.first_touch * 2) + (self.passing * 2) + self.tackling + self.technique + self.anticipation + self.composure + (self.decisions * 2) + self.off_the_ball + (self.teamwork * 2) + self.vision + (self.work_rate * 2) + (self.stamina * 2)
         return self.score
-    def pressing_forward_a(self):
-        self.score = self.finishing + self.first_touch + (self.aggression * 2) + (self.anticipation * 2) + (
-                    self.bravery * 2) + self.composure + self.concentration + self.decisions + (
-                                 self.off_the_ball * 2) + (self.teamwork * 2) + (self.work_rate * 2) + (
-                                 self.acceleration * 2) + self.agility + self.balance + (self.pace * 2) + (
-                                 self.stamina * 2) + self.strength
-        return self.score
-
-    def deep_lying_forward_a(self):
-        self.score = self.dribbling + self.finishing + (self.first_touch * 2) + (self.passing * 2) + (
-                self.technique * 2) + self.anticipation + (self.composure * 2) + (
-                             self.decisions * 2) + self.flair + (self.off_the_ball * 2) + (
-                             self.teamwork * 2) + self.vision + self.balance + self.strength
-        return self.score
 
     def trequartista(self):
         self.score = (self.dribbling * 2) + self.finishing + (self.first_touch * 2) + (self.passing * 2) + (
@@ -391,4 +377,60 @@ class Role:
                     self.passing * 2) + (self.technique * 2) + (self.anticipation * 2) + self.composure + (
                                  self.decisions * 2) + (self.flair * 2) + (
                                  self.off_the_ball * 2) + self.vision + self.agility
+        return self.score
+
+    def advanced_forward(self):
+        self.score = (self.dribbling * 2) + (self.finishing * 2) + (
+                    self.first_touch * 2) + self.passing + (self.technique * 2) + self.anticipation + (
+                                 self.composure * 2) + self.decisions + (
+                                 self.off_the_ball * 2) + self.work_rate + (
+                                 self.acceleration * 2) + self.agility + self.balance + self.pace + self.stamina
+        return self.score
+
+    def pressing_forward_d(self):
+        self.score = self.first_touch + (self.aggression * 2) + (self.anticipation * 2) + (
+                    self.bravery * 2) + self.composure + self.concentration + (self.decisions * 2) + (self.teamwork * 2) + (self.work_rate * 2) + (
+                                 self.acceleration * 2) + self.agility + self.balance + (self.pace * 2) + (
+                                 self.stamina * 2) + self.strength
+        return self.score
+
+    def pressing_forward_s(self):
+        self.score = self.first_touch + self.passing + (self.aggression * 2) + (self.anticipation * 2) + (
+                    self.bravery * 2) + self.composure + self.concentration + (self.decisions * 2) + self.off_the_ball + (self.teamwork * 2) + (self.work_rate * 2) + (
+                                 self.acceleration * 2) + self.agility + self.balance + (self.pace * 2) + (
+                                 self.stamina * 2) + self.strength
+        return self.score
+
+    def pressing_forward_a(self):
+        self.score = self.finishing + self.first_touch + (self.aggression * 2) + (self.anticipation * 2) + (
+                    self.bravery * 2) + self.composure + self.concentration + self.decisions + (
+                                 self.off_the_ball * 2) + (self.teamwork * 2) + (self.work_rate * 2) + (
+                                 self.acceleration * 2) + self.agility + self.balance + (self.pace * 2) + (
+                                 self.stamina * 2) + self.strength
+        return self.score
+
+    def deep_lying_forward_s(self):
+        self.score = self.finishing + (self.first_touch * 2) + (self.passing * 2) + (
+                self.technique * 2) + self.anticipation + (self.composure * 2) + (
+                             self.decisions * 2) + self.flair + (self.off_the_ball * 2) + (
+                             self.teamwork * 2) + self.vision + self.balance + self.strength
+        return self.score
+
+    def deep_lying_forward_a(self):
+        self.score = self.dribbling + self.finishing + (self.first_touch * 2) + (self.passing * 2) + (
+                self.technique * 2) + self.anticipation + (self.composure * 2) + (
+                             self.decisions * 2) + self.flair + (self.off_the_ball * 2) + (
+                             self.teamwork * 2) + self.vision + self.balance + self.strength
+        return self.score
+
+    def complete_forward_s(self):
+        self.score = (self.dribbling *2) + self.finishing + (self.first_touch * 2) + (self.heading * 2) + (self.long_shots * 2) + (self.passing * 2) + (self.technique * 2) + (self.anticipation * 2) + (self.composure * 2) + (self.decisions * 2) + (
+                                 self.off_the_ball * 2) + self.teamwork + (self.vision * 2) + self.work_rate + (
+                                 self.acceleration * 2) + (self.agility * 2) + self.balance + self.jumping_reach + self.pace + self.stamina + (self.strength * 2)
+        return self.score
+
+    def complete_forward_a(self):
+        self.score = (self.dribbling *2) + (self.finishing * 2) + (self.first_touch * 2) + (self.heading * 2) + self.long_shots + self.passing + (self.technique * 2) + (self.anticipation * 2) + (self.composure * 2) + self.decisions + (
+                                 self.off_the_ball * 2) + self.teamwork + self.vision + self.work_rate + (
+                                 self.acceleration * 2) + (self.agility * 2) + self.balance + self.jumping_reach + self.pace + self.stamina + (self.strength * 2)
         return self.score
