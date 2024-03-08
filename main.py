@@ -36,7 +36,6 @@ class User(UserMixin, db.Model):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     email: Mapped[str] = mapped_column(String(100), unique=True)
     password: Mapped[str] = mapped_column(String(100))
-    name: Mapped[str] = mapped_column(String(1000), unique=True)
 
 
 with app.app_context():
@@ -57,7 +56,7 @@ def home():
 
     if form.validate_on_submit():
         filename = secure_filename(form.file.data.filename)
-        form.file.data.save(f'./uploads/{current_user.name}/' + filename)
+        form.file.data.save(f'./uploads/{current_user.email}/' + filename)
         return redirect(url_for('home'))
 
     return render_template("index.html", form=form, logged_in=current_user.is_authenticated)
@@ -85,12 +84,12 @@ def register():
         new_user = User(
             email=request.form.get('email'),
             password=hash_and_salted_password,
-            name=request.form.get('name')
+
         )
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
-        path = './uploads/' + new_user.name
+        path = './uploads/' + new_user.email
         os.mkdir(path)
         return redirect(url_for("home"))
 
@@ -126,8 +125,8 @@ def logout():
 def role(selected_role):
     first_dict = {}
     final_list = []
-    user_name = current_user.name
-    file = open(f'./uploads/{user_name}/Untitled.rtf', encoding="utf-8")
+    user_email = current_user.email
+    file = open(f'./uploads/{user_email}/Untitled.rtf', encoding="utf-8")
     content = file.read()
     text = rtf_to_text(content)
     text2 = text.replace(" ", "")
