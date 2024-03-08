@@ -11,15 +11,18 @@
   <p class="lead">Want to know which of your players will make you feel like you're actually good at this game?</p>
         <p>You've found the right place!</p>
   <hr class="my-4">
+    <a href="https://www.youtube.com/watch?v=xchgxfgT0pM&ab_channel=OvidiuMatusa" class="btn btn-warning">How To Use It</a>
+
+    <br><br>
 
         {% if not logged_in: %}
   <a
     href="{{ url_for('register') }}"
-    class="btn btn-primary btn-block btn-large"
+    class="btn btn-primary btn-block btn-large" style="width: 5rem"
     >Register</a
   > or   <a
     href="{{ url_for('login') }}"
-    class="btn btn-primary btn-block btn-large"
+    class="btn btn-primary btn-block btn-large"  style="width: 5rem"
     >Login</a
   >
         {% else %}
