@@ -27,6 +27,14 @@
   >
         {% else %}
 
+                {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color: red">{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
 <form method="post" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
     {{ form.file }}
