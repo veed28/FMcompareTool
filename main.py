@@ -56,7 +56,7 @@ def home():
 
     if form.validate_on_submit():
         filename = secure_filename(form.file.data.filename)
-        form.file.data.save(f'var/data/uploads/{current_user.email}/' + filename)
+        form.file.data.save(f'./uploads/{current_user.email}/' + filename)
         return redirect(url_for('home'))
 
     return render_template("index.html", form=form, logged_in=current_user.is_authenticated)
@@ -89,7 +89,7 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
-        path = 'var/data/uploads/' + new_user.email
+        path = './uploads/' + new_user.email
         os.mkdir(path)
         return redirect(url_for("home"))
 
@@ -127,7 +127,7 @@ def role(selected_role):
     final_list = []
     user_email = current_user.email
     try:
-        file = open(f'var/data/uploads/{user_email}/Untitled.rtf', encoding="utf-8")
+        file = open(f'./uploads/{user_email}/Untitled.rtf', encoding="utf-8")
         content = file.read()
         text = rtf_to_text(content)
         text2 = text.replace(" ", "")
