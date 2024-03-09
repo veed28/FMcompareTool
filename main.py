@@ -127,19 +127,23 @@ def role(selected_role):
     first_dict = {}
     final_list = []
     user_name = current_user.name
-    file = open(f'./uploads/{user_name}/Untitled.rtf', encoding="utf-8")
-    content = file.read()
-    text = rtf_to_text(content)
-    text2 = text.replace(" ", "")
-    text = text2.replace("-", "")
-    text2 = text.replace("||", "|")
-    text = text2.replace("||", "|")
-    text2 = text.replace("||", "|")
-    final_list = text2.split("|")
-    del final_list[0:38]
-    del final_list[-1]
-    player_count = int(len(final_list) / 37)
-    file.close()
+    try:
+        file = open(f'./uploads/{user_name}/Untitled.rtf', encoding="utf-8")
+        content = file.read()
+        text = rtf_to_text(content)
+        text2 = text.replace(" ", "")
+        text = text2.replace("-", "")
+        text2 = text.replace("||", "|")
+        text = text2.replace("||", "|")
+        text2 = text.replace("||", "|")
+        final_list = text2.split("|")
+        del final_list[0:38]
+        del final_list[-1]
+        player_count = int(len(final_list) / 37)
+        file.close()
+    except FileNotFoundError:
+        flash('Please upload the "Untitled.rtf" file')
+        return redirect(url_for('home'))
     for player in range(player_count):
         role = Role(player, final_list)
         if selected_role == 'inverted_wing_back_s': #IWB-S
